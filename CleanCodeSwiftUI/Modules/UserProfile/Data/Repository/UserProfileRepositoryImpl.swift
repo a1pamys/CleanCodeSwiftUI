@@ -14,7 +14,7 @@ final class UserProfileRepositoryImpl: UserProfileRepository {
         self.service = service
     }
 
-    func fetchUserProfile() async throws -> GitHubUserDTO {
+    func fetchUserProfile() async throws -> UserProfileDTO {
         try await service.fetchUserProfileFromNetwork().toDomain()
     }
 }

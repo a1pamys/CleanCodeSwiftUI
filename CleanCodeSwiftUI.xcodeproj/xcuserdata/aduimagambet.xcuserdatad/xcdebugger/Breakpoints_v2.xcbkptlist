@@ -7,62 +7,125 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DDDAA6F8-1351-4766-BF68-210645F7486E"
+            uuid = "363EFBE8-CC6C-4772-9DFB-81B81E21BE0C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CleanCodeSwiftUI/Modules/UserProfile/Presentation/Views/UserProfileView.swift"
+            filePath = "CleanCodeSwiftUI/Modules/UserProfile/Presentation/ViewModel/UserProfileViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "content"
-            landmarkType = "24">
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "fetchUserProfile()"
+            landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "DDDAA6F8-1351-4766-BF68-210645F7486E - 4e93e5d57d927b6f"
+                  uuid = "363EFBE8-CC6C-4772-9DFB-81B81E21BE0C - 75875f40c7576ed1"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in CleanCodeSwiftUI.UserProfileView.content.getter : some"
+                  symbolName = "(1) suspend resume partial function for CleanCodeSwiftUI.UserProfileViewModel.fetchUserProfile() async -&gt; ()"
                   moduleName = "CleanCodeSwiftUI"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/aduimagambet/Downloads/CleanCodeSwiftUI/CleanCodeSwiftUI/Modules/UserProfile/Presentation/Views/UserProfileView.swift"
+                  urlString = "file:///Users/aduimagambet/Downloads/CleanCodeSwiftUI/CleanCodeSwiftUI/Modules/UserProfile/Presentation/ViewModel/UserProfileViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "348">
-               </Location>
-               <Location
-                  uuid = "DDDAA6F8-1351-4766-BF68-210645F7486E - b1f35bf786df115"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (SwiftUI.Image) -&gt; &lt;&lt;opaque return type of SwiftUI.View.clipShape&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Shape&gt;(_: &#x3c4;_1_0, style: SwiftUI.FillStyle) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in CleanCodeSwiftUI.UserProfileView.content.getter : some"
-                  moduleName = "CleanCodeSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/aduimagambet/Downloads/CleanCodeSwiftUI/CleanCodeSwiftUI/Modules/UserProfile/Presentation/Views/UserProfileView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
                   offsetFromSymbolStart = "124">
                </Location>
                <Location
-                  uuid = "DDDAA6F8-1351-4766-BF68-210645F7486E - 48e63f7e62858657"
+                  uuid = "363EFBE8-CC6C-4772-9DFB-81B81E21BE0C - ec19cf61f75afaf7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (SwiftUI.Image) -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.clipShape&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Shape&gt;(_: &#x3c4;_1_0, style: SwiftUI.FillStyle) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in CleanCodeSwiftUI.UserProfileView.content.getter : some"
+                  symbolName = "(2) await resume partial function for CleanCodeSwiftUI.UserProfileViewModel.fetchUserProfile() async -&gt; ()"
                   moduleName = "CleanCodeSwiftUI"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/aduimagambet/Downloads/CleanCodeSwiftUI/CleanCodeSwiftUI/Modules/UserProfile/Presentation/Views/UserProfileView.swift"
+                  urlString = "file:///Users/aduimagambet/Downloads/CleanCodeSwiftUI/CleanCodeSwiftUI/Modules/UserProfile/Presentation/ViewModel/UserProfileViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "192">
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "363EFBE8-CC6C-4772-9DFB-81B81E21BE0C - adf28d0e9ab04ad3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for CleanCodeSwiftUI.UserProfileViewModel.fetchUserProfile() async -&gt; ()"
+                  moduleName = "CleanCodeSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aduimagambet/Downloads/CleanCodeSwiftUI/CleanCodeSwiftUI/Modules/UserProfile/Presentation/ViewModel/UserProfileViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "363EFBE8-CC6C-4772-9DFB-81B81E21BE0C - 41f414ebbf8dd8dc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for CleanCodeSwiftUI.UserProfileViewModel.fetchUserProfile() async -&gt; ()"
+                  moduleName = "CleanCodeSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aduimagambet/Downloads/CleanCodeSwiftUI/CleanCodeSwiftUI/Modules/UserProfile/Presentation/ViewModel/UserProfileViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B17EABD1-794D-4A48-9C5D-4D54BAFEDE51"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CleanCodeSwiftUI/Modules/UserProfile/Presentation/ViewModel/UserProfileViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "fetchUserProfile()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B17EABD1-794D-4A48-9C5D-4D54BAFEDE51 - 41f414ebbf8dd81e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for CleanCodeSwiftUI.UserProfileViewModel.fetchUserProfile() async -&gt; ()"
+                  moduleName = "CleanCodeSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aduimagambet/Downloads/CleanCodeSwiftUI/CleanCodeSwiftUI/Modules/UserProfile/Presentation/ViewModel/UserProfileViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "B17EABD1-794D-4A48-9C5D-4D54BAFEDE51 - 41f414ebbf8dd81e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for CleanCodeSwiftUI.UserProfileViewModel.fetchUserProfile() async -&gt; ()"
+                  moduleName = "CleanCodeSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aduimagambet/Downloads/CleanCodeSwiftUI/CleanCodeSwiftUI/Modules/UserProfile/Presentation/ViewModel/UserProfileViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "324">
                </Location>
             </Locations>
          </BreakpointContent>

@@ -8,6 +8,6 @@
 import Foundation
 
 protocol UserProfileRepository {
-    func fetchUserProfile() async throws -> GitHubUserDTO
+    func fetchUserProfile() async throws -> UserProfileDTO
 }
 

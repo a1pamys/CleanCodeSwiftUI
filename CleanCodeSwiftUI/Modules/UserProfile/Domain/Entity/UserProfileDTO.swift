@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Domain DTO
 struct UserProfileDTO: Codable {
     let login: String
     let avatarUrl: String

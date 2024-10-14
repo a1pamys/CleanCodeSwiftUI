@@ -8,7 +8,7 @@
 import Foundation
 
 protocol UserProfileUseCase {
-    func fetchUserProfile() async throws -> GitHubUserDTO
+    func fetchUserProfile() async throws -> UserProfileDTO
 }
 
 final class UserProfileUseCaseImpl: UserProfileUseCase {
@@ -18,7 +18,7 @@ final class UserProfileUseCaseImpl: UserProfileUseCase {
         self.repository = repository
     }
 
-    func fetchUserProfile() async throws -> GitHubUserDTO {
+    func fetchUserProfile() async throws -> UserProfileDTO {
         try await repository.fetchUserProfile()
     }
 }

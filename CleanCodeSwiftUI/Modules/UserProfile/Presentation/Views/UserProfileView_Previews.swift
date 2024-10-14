@@ -19,10 +19,9 @@ extension UserProfileView_Previews {
     }
 
     class UserProfileViewModelMock: UserProfileViewModelProtocol {
-        var isError: Bool = false
-        var error: String = "MockError"
+        var error: String? = "MockError"
 
-        var user: UserProfileDTO = .init(
+        var user: UserProfileDTO? = .init(
             login: "MockLogin",
             avatarUrl: "MockUrl",
             bio: "MockBio"

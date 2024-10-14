@@ -15,17 +15,23 @@ struct UserProfileView<ViewModel>: View where ViewModel: UserProfileViewModelPro
     }
 
     var body: some View {
-        if !viewModel.isError {
-            content
-        } else {
-            ProgressView()
-                .progressViewStyle(.circular)
+        VStack {
+            if let user = viewModel.user {
+                content(user)
+            } else {
+                ProgressView()
+                    .progressViewStyle(.circular)
+            }
+        }
+        .task {
+            await fetchUserProfile()
         }
     }
 
-    private var content: some View {
+    @ViewBuilder
+    private func content(_ user: UserProfileDTO) -> some View {
         VStack(spacing: 20) {
-            AsyncImage(url: URL(string: viewModel.user.avatarUrl)) { image in
+            AsyncImage(url: URL(string: user.avatarUrl)) { image in
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -36,17 +42,14 @@ struct UserProfileView<ViewModel>: View where ViewModel: UserProfileViewModelPro
             }
             .frame(width: 120, height: 120)
 
-            Text(viewModel.user.login)
+            Text(user.login)
                 .bold()
                 .font(.title3)
 
-            Text(viewModel.user.bio)
+            Text(user.bio)
                 .padding()
         }
         .padding()
-        .task {
-            await fetchUserProfile()
-        }
     }
 
     private func fetchUserProfile() async {

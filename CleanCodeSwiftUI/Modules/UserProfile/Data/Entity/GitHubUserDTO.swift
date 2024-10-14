@@ -7,12 +7,13 @@
 
 import Foundation
 
+// Data DTO
 struct GitHubUserDTO: Decodable {
     let login: String?
     let avatarUrl: String?
     let bio: String?
 
-    func toDomain() -> GitHubUserDTO {
+    func toDomain() -> UserProfileDTO {
         .init(
             login: login ?? "",
             avatarUrl: avatarUrl ?? "",
