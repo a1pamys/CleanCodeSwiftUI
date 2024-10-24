@@ -25,16 +25,25 @@ final class UserProfileViewModelTest: XCTestCase {
     }
 
     func testUserProfileViewModelSuccess() async throws {
-        mockUserProfileUseCase.response = MockData.userProfileDTO
+        let expected = MockData.userProfileDTO
+        mockUserProfileUseCase.response = expected
         await userProfileViewModel.fetchUserProfile()
-        XCTAssertNil(userProfileViewModel.error)
-        XCTAssertNotNil(userProfileViewModel.user)
+
+        if case let .success(userProfile) = userProfileViewModel.state {
+            XCTAssertEqual(userProfile, expected)
+        } else {
+            XCTFail("Expected state to be .success with MockData.userProfileDTO")
+        }
     }
 
     func testUserProfileViewModelFailure() async throws {
         mockUserProfileUseCase.error = NetworkError.failed
         await userProfileViewModel.fetchUserProfile()
-        XCTAssertNil(userProfileViewModel.user)
-        XCTAssertNotNil(userProfileViewModel.error)
+
+        if case let .error(errorMessage) = userProfileViewModel.state {
+            XCTAssertEqual(errorMessage, NetworkError.failed.description)
+        } else {
+            XCTFail("Expected state to be .error with NetworkError.failed description")
+        }
     }
 }
