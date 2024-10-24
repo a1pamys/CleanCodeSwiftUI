@@ -16,9 +16,12 @@ struct UserProfileView<ViewModel>: View where ViewModel: UserProfileViewModelPro
 
     var body: some View {
         VStack {
-            if let user = viewModel.user {
+            switch viewModel.state {
+            case .success(let user):
                 content(user)
-            } else {
+            case .error(let errorString):
+                Text(errorString)
+            case .loading:
                 ProgressView()
                     .progressViewStyle(.circular)
             }

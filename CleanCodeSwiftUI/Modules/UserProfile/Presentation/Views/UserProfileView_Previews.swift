@@ -19,12 +19,12 @@ extension UserProfileView_Previews {
     }
 
     class UserProfileViewModelMock: UserProfileViewModelProtocol {
-        var error: String? = "MockError"
-
-        var user: UserProfileDTO? = .init(
-            login: "MockLogin",
-            avatarUrl: "MockUrl",
-            bio: "MockBio"
+        var state: UserProfileState = .success(
+            .init(
+                login: "MockLogin",
+                avatarUrl: "MockUrl",
+                bio: "MockBio"
+            )
         )
 
         func fetchUserProfile() async {}

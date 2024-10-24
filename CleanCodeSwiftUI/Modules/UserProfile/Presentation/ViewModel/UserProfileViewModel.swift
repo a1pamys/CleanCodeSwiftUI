@@ -8,32 +8,34 @@
 import Foundation
 
 protocol UserProfileViewModelProtocol: ObservableObject {
-    var user: UserProfileDTO? { get set }
-    var error: String? { get }
+    var state: UserProfileState { get set }
 
     func fetchUserProfile() async
 }
 
 final class UserProfileViewModel: UserProfileViewModelProtocol {
-    @Published var user: UserProfileDTO?
-    @Published var error: String?
+    @Published var state: UserProfileState
 
     private let userProfileUseCase: UserProfileUseCase!
 
     init(useCase: UserProfileUseCase) {
         self.userProfileUseCase = useCase
+        self.state = .loading
     }
 
     /// This method fetches user profile and catches error if any
     @MainActor func fetchUserProfile() async {
         do {
-            self.user = try await userProfileUseCase.fetchUserProfile()
+            let user = try await userProfileUseCase.fetchUserProfile()
+            self.state = .success(user)
         } catch {
+            let errorString: String
             if let networkError = error as? NetworkError {
-                self.error = networkError.description
+                errorString = networkError.description
             } else {
-                self.error = error.localizedDescription
+                errorString = error.localizedDescription
             }
+            self.state = .error(errorString)
         }
     }
 }
